@@ -1,0 +1,148 @@
+.custom-card {
+  background-color: rgba(192, 192, 192, 0.895);
+}
+/* لون خلفية ال مدخلات */
+.form-outline .form-control {
+  background-color: rgba(43, 47, 56, 0.5) !important;
+  color: #ffffff !important;
+  border-radius: 10px;
+}
+/* mdb بيشيل الاطار الازرق بتاع ال    */
+.form-outline .form-control:focus ~ .form-notch .form-notch-leading,
+.form-outline .form-control:focus ~ .form-notch .form-notch-middle,
+.form-outline .form-control:focus ~ .form-notch .form-notch-trailing {
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+/* بيغير لون الكلام عند الضغط عليه */
+
+.form-outline .form-control:focus ~ .form-label {
+  color: #e63312 !important;
+}
+
+.btn-colorl {
+  background: orangered;
+  border-radius: 50px;
+}
+
+/* لون الـ placeholder */
+.form-outline .form-control::placeholder {
+  color: black !important;
+  opacity: 1 !important;
+}
+
+.slider-track {
+  width: max-content;
+  animation: slide-auto 60s linear infinite;
+}
+
+.product-slider:hover .slider-track {
+  animation-play-state: paused;
+}
+
+@keyframes slide-auto {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(var(--shift, -50%));
+  }
+}
+
+.product-card {
+  width: 320px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.im {
+  height: 800px !important;
+  width: 100%;
+}
+
+.back {
+  height: 800px;
+}
+
+.bg {
+  background-color: #0b0b0b;
+  color: #fff;
+}
+
+.main-wrapper {
+  height: calc(100vh - 70px);
+  overflow: hidden;
+}
+.playlist-col,
+.player-col {
+  height: 100%;
+}
+.player-col {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.player-container {
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
+  position: relative;
+  background-color: #000;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.player-container iframe,
+.player-container video {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+.cover-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* ===== Layout (Mobile) ===== */
+@media (max-width: 767.98px) {
+  .main-wrapper {
+    height: auto;
+    overflow: visible;
+    padding-bottom: 1rem;
+  }
+  .player-col {
+    height: auto;
+  }
+  .player-container {
+    flex: none;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+  .playlist-col {
+    height: 60vh;
+  }
+}
+
+.li:hover {
+  background-color: #e63312 !important;
+  border-radius: 10px;
+}
